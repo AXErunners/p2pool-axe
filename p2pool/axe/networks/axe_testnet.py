@@ -8,7 +8,7 @@ from p2pool.util import pack
 
 
 P2P_PREFIX = 'cee2caff'.decode('hex')
-P2P_PORT = 19999
+P2P_PORT = 19937
 ADDRESS_VERSION = 140
 SCRIPT_ADDRESS_VERSION = 19
 RPC_PORT = 19998
