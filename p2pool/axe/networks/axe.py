@@ -11,7 +11,7 @@ P2P_PREFIX = 'bf0c6bbd'.decode('hex')
 P2P_PORT = 9937
 ADDRESS_VERSION = 76
 SCRIPT_ADDRESS_VERSION = 16
-RPC_PORT = 9998
+RPC_PORT = 9337
 RPC_CHECK = defer.inlineCallbacks(lambda axed: defer.returnValue(
             'axeaddress' in (yield axed.rpc_help()) and
             not (yield axed.rpc_getinfo())['testnet']
