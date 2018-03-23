@@ -8,6 +8,7 @@ TARGET_LOOKBEHIND = 100 # shares  //with that the pools share diff is adjusting 
 SPREAD = 10 # blocks
 IDENTIFIER = '3A4E0C8EE3D735C8'.decode('hex')
 PREFIX = '3A4E0ABD3A8CC80D'.decode('hex')
+COINBASEEXT = '0D2F5032506F6F6C2D444153482F'.decode('hex')
 P2P_PORT = 8999
 MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
