@@ -14,6 +14,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 7903
-BOOTSTRAP_ADDRS = 'axe01.p2poolmining.us p2pool.2sar.ru axe02.p2poolmining.us p2pool.axe.siampm.com axe03.p2poolmining.us crypto.office-on-the.net axe04.p2poolmining.us'.split(' ')
+BOOTSTRAP_ADDRS = '144.202.40.33'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-axe'
 VERSION_CHECK = lambda v: v >= 120100
