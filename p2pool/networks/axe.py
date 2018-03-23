@@ -8,7 +8,6 @@ TARGET_LOOKBEHIND = 100 # shares  //with that the pools share diff is adjusting 
 SPREAD = 10 # blocks
 IDENTIFIER = '3A4E0C8EE3D735C8'.decode('hex')
 PREFIX = '3A4E0ABD3A8CC80D'.decode('hex')
-
 P2P_PORT = 8999
 MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
@@ -16,4 +15,4 @@ PERSIST = True
 WORKER_PORT = 7903
 BOOTSTRAP_ADDRS = '144.202.40.33'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-axe'
-VERSION_CHECK = lambda v: v >= 120100
+VERSION_CHECK = lambda v: v >= 010100
