@@ -1,3 +1,6 @@
+p2pool-axe
+-----------
+[![Build Status](https://travis-ci.org/AXErunners/p2pool-axe.svg?branch=master)](https://travis-ci.org/AXErunners/p2pool-axe)
 Requirements:
 -------------------------
 Generic:
