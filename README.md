@@ -9,7 +9,7 @@
 * Twisted >=13.0.0
 * Zope.interface >=3.8.0
 
-Linux:
+#### Linux:
 
     sudo apt-get install python-zope.interface python-twisted python-twisted-web python-dev libncurses-dev
     sudo apt-get install gcc g++
@@ -20,7 +20,7 @@ Download the required submodules:
 
     git submodule init && git submodule update
 
-axe_hash:
+#### axe_hash:
 
     cd axe_hash
     python setup.py install --user
