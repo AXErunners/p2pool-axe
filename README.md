@@ -1,8 +1,8 @@
 # p2pool-axe
 [![Build Status](https://travis-ci.org/AXErunners/p2pool-axe.svg?branch=master)](https://travis-ci.org/AXErunners/p2pool-axe)
-# Requirements:
+## Requirements:
 
-## Generic:
+### Generic:
 
 * axed >=1.1.2
 * Python >=2.7
@@ -14,7 +14,7 @@ Linux:
     sudo apt-get install python-zope.interface python-twisted python-twisted-web python-dev libncurses-dev
     sudo apt-get install gcc g++
 
-# Install Python modules:
+### Install Python modules:
 
 Download the required submodules:
 
@@ -25,8 +25,8 @@ axe_hash:
     cd axe_hash
     python setup.py install --user
 
-Running P2Pool:
--------------------------
+### Running P2Pool:
+
 To use P2Pool, you must be running your own local axed. For standard
 configurations, using P2Pool should be as simple as:
 
@@ -42,18 +42,17 @@ Run for additional options.
 
     python run_p2pool.py --help
 
-Official wiki :
--------------------------
+### Official wiki :
+
 https://en.bitcoin.it/wiki/P2Pool
 
-Alternate web front end :
--------------------------
+### Alternate web front end :
+
 * https://github.com/hardcpp/P2PoolExtendedFrontEnd
 * https://github.com/johndoe75/p2pool-node-status
 * https://github.com/justino/p2pool-ui-punchy
 
-Sponsors:
--------------------------
+### Sponsors:
 
 Thanks to:
 * The Bitcoin Foundation for its generous support of P2Pool
