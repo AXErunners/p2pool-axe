@@ -1,9 +1,8 @@
-p2pool-axe
------------
+# p2pool-axe
 [![Build Status](https://travis-ci.org/AXErunners/p2pool-axe.svg?branch=master)](https://travis-ci.org/AXErunners/p2pool-axe)
-Requirements:
--------------------------
-Generic:
+# Requirements:
+
+## Generic:
 
 * axed >=1.1.2
 * Python >=2.7
@@ -15,8 +14,8 @@ Linux:
     sudo apt-get install python-zope.interface python-twisted python-twisted-web python-dev libncurses-dev
     sudo apt-get install gcc g++
 
-Install Python modules:
--------------------------
+# Install Python modules:
+
 Download the required submodules:
 
     git submodule init && git submodule update
