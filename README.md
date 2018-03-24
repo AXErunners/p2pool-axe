@@ -9,15 +9,14 @@ Generic:
 
 Linux:
 
-    sudo apt-get install python-zope.interface python-twisted python-twisted-web python-dev
+    sudo apt-get install python-zope.interface python-twisted python-twisted-web python-dev libncurses-dev
     sudo apt-get install gcc g++
 
 Install Python modules:
 -------------------------
 Download the required submodules:
 
-    git submodule init
-    git submodule update
+    git submodule init && git submodule update
 
 axe_hash:
 
