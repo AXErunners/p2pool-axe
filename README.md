@@ -1,6 +1,5 @@
 # p2pool-axe
 [![Build Status](https://travis-ci.org/AXErunners/p2pool-axe.svg?branch=master)](https://travis-ci.org/AXErunners/p2pool-axe)
-[![Build status](https://ci.appveyor.com/api/projects/status/3stmfaa4h0hatdfb/branch/master?svg=true)](https://ci.appveyor.com/project/charlesrocket/p2pool-axe/branch/master)
 
 ## Requirements:
 
