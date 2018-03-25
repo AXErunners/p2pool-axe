@@ -38,8 +38,8 @@ try:
         data_files=[
             ('', ['README.md']),
 #            ("Microsoft.VC90.MFC", mfcfiles),
-            ('web-static', [
-                'web-static/css/bootstrap-amelia.min.css',
+#TODO           ('web-static', [
+#fix links      'web-static/css/bootstrap-amelia.min.css',
                 'web-static/css/bootstrap-cerulean.min.css',
                 'web-static/css/bootstrap-cosmo.min.css',
                 'web-static/css/bootstrap-cyborg.min.css',
