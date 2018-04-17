@@ -41,9 +41,10 @@ Run for additional options.
 
     python run_p2pool.py --help
 
-### Official wiki :
+### Official :
 
 https://en.bitcoin.it/wiki/P2Pool
+https://axerunners.github.io/p2pool/
 
 ### Alternate web front end :
 
