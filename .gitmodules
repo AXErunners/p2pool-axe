@@ -1,6 +1,3 @@
 [submodule "axe_hash"]
 	path = axe_hash
 	url = https://github.com/AXErunners/axe_hash
-[submodule "p2pool-ui-punchy"]
-	path = p2pool-ui-punchy
-	url = https://github.com/justino/p2pool-ui-punchy
