@@ -44,7 +44,7 @@ Run for additional options.
 ### Official :
 
 * https://en.bitcoin.it/wiki/P2Pool
-* https://axerunners.github.io/p2pool/
+* https://axerunners.github.io/#p2pool
 
 ### Alternate web front end :
 
