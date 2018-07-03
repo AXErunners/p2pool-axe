@@ -11,10 +11,10 @@ P2P_PREFIX = 'cee2caff'.decode('hex')
 P2P_PORT = 19937
 ADDRESS_VERSION = 140
 SCRIPT_ADDRESS_VERSION = 19
-RPC_PORT = 19998
+RPC_PORT = 19337
 RPC_CHECK = defer.inlineCallbacks(lambda axed: defer.returnValue(
-            'axeaddress' in (yield axed.rpc_help()) and
-            (yield axed.rpc_getinfo())['testnet']
+            'axe' in (yield axed.rpc_help()) and
+            (yield axed.rpc_getblockchaininfo())['chain'] != 'main'
         ))
 BLOCKHASH_FUNC = lambda data: pack.IntType(256).unpack(__import__('axe_hash').getPoWHash(data))
 POW_FUNC = lambda data: pack.IntType(256).unpack(__import__('axe_hash').getPoWHash(data))

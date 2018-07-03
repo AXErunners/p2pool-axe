@@ -13,8 +13,8 @@ def check(axed, net):
     if not (yield net.PARENT.RPC_CHECK(axed)):
         print >>sys.stderr, "    Check failed! Make sure that you're connected to the right axed with --axed-rpc-port!"
         raise deferral.RetrySilentlyException()
-    if not net.VERSION_CHECK((yield axed.rpc_getinfo())['version']):
-        print >>sys.stderr, '    axe version too old! Upgrade to 0.12.1.0 or newer!'
+    if not net.VERSION_CHECK((yield axed.rpc_getnetworkinfo())['version']):
+        print >>sys.stderr, '    axe version too old! Upgrade to 0.12.2.0 or newer!'
         raise deferral.RetrySilentlyException()
 
 @deferral.retry('Error getting work from axed:', 3)

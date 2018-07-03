@@ -45,7 +45,7 @@ def _atomic_write(filename, data):
         os.remove(filename)
         os.rename(filename + '.new', filename)
 
-def get_web_root(wb, datadir_path, axed_getinfo_var, stop_event=variable.Event(), static_dir=None):
+def get_web_root(wb, datadir_path, axed_getnetworkinfo_var, stop_event=variable.Event(), static_dir=None):
     node = wb.node
     start_time = time.time()
     
@@ -175,7 +175,7 @@ def get_web_root(wb, datadir_path, axed_getinfo_var, stop_event=variable.Event()
             attempts_to_share=axe_data.target_to_average_attempts(node.tracker.items[node.best_share_var.value].max_target),
             attempts_to_block=axe_data.target_to_average_attempts(node.axed_work.value['bits'].target),
             block_value=node.axed_work.value['subsidy']*1e-8,
-            warnings=p2pool_data.get_warnings(node.tracker, node.best_share_var.value, node.net, axed_getinfo_var.value, node.axed_work.value),
+            warnings=p2pool_data.get_warnings(node.tracker, node.best_share_var.value, node.net, axed_getnetworkinfo_var.value, node.axed_work.value),
             donation_proportion=wb.donation_percentage/100,
             version=p2pool.__version__,
             protocol_version=p2p.Protocol.VERSION,
