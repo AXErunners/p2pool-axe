@@ -20,7 +20,7 @@ BLOCKHASH_FUNC = lambda data: pack.IntType(256).unpack(__import__('axe_hash').ge
 POW_FUNC = lambda data: pack.IntType(256).unpack(__import__('axe_hash').getPoWHash(data))
 BLOCK_PERIOD = 150 # s
 SYMBOL = 'AXE'
-CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'AxeCore') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/AxeCore/') if platform.system() == 'Darwin' else os.path.expanduser('~/.axecore'), 'axe.conf')
+CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'AXECore') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/AXECore/') if platform.system() == 'Darwin' else os.path.expanduser('~/.axecore'), 'axe.conf')
 BLOCK_EXPLORER_URL_PREFIX = 'http://207.246.65.114:3001/block/'
 ADDRESS_EXPLORER_URL_PREFIX = 'http://207.246.65.114:3001/address/'
 TX_EXPLORER_URL_PREFIX = 'http://207.246.65.114:3001/tx/'

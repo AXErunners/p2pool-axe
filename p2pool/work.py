@@ -103,7 +103,7 @@ class WorkerBridge(worker_interface.WorkerBridge):
                 print 'Skipping from block %x to block %x! NewHeight=%s' % (bb['previous_block'],
                     self.node.net.PARENT.BLOCKHASH_FUNC(axe_data.block_header_type.pack(bb)),t['height']+1,)
                 '''
-                # New block template from Axe daemon only
+                # New block template from AXE daemon only
                 t = dict(
                     version=bb['version'],
                     previous_block=self.node.net.PARENT.BLOCKHASH_FUNC(axe_data.block_header_type.pack(bb)),

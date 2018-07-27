@@ -1,5 +1,5 @@
 '''
-Implementation of Axe's p2p protocol
+Implementation of AXE's p2p protocol
 '''
 
 import random
@@ -164,7 +164,7 @@ class Protocol(p2protocol.Protocol):
         if hasattr(self, 'pinger'):
             self.pinger.stop()
         if p2pool.DEBUG:
-            print >>sys.stderr, 'Axed connection lost. Reason:', reason.getErrorMessage()
+            print >>sys.stderr, 'axed connection lost. Reason:', reason.getErrorMessage()
 
 class ClientFactory(protocol.ReconnectingClientFactory):
     protocol = Protocol
