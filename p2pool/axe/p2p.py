@@ -19,7 +19,7 @@ class Protocol(p2protocol.Protocol):
 
     def connectionMade(self):
         self.send_version(
-            version=70208,
+            version=70212,
             services=1,
             time=int(time.time()),
             addr_to=dict(
@@ -62,7 +62,6 @@ class Protocol(p2protocol.Protocol):
 
         self.pinger = deferral.RobustLoopingCall(self.send_ping, nonce=1234)
         self.pinger.start(30)
-
 
     message_inv = pack.ComposedType([
         ('invs', pack.ListType(pack.ComposedType([
@@ -164,7 +163,7 @@ class Protocol(p2protocol.Protocol):
         if hasattr(self, 'pinger'):
             self.pinger.stop()
         if p2pool.DEBUG:
-            print >>sys.stderr, 'axed connection lost. Reason:', reason.getErrorMessage()
+            print >>sys.stderr, 'Axed connection lost. Reason:', reason.getErrorMessage()
 
 class ClientFactory(protocol.ReconnectingClientFactory):
     protocol = Protocol
