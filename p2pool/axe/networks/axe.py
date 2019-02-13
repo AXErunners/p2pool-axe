@@ -9,7 +9,7 @@ from p2pool.util import pack
 
 P2P_PREFIX = 'bf0c6bbd'.decode('hex')
 P2P_PORT = 9937
-ADDRESS_VERSION = 55
+ADDRESS_VERSION = 76
 SCRIPT_ADDRESS_VERSION = 16
 RPC_PORT = 9337
 RPC_CHECK = defer.inlineCallbacks(lambda axed: defer.returnValue(
