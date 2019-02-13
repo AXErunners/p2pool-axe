@@ -14,6 +14,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 7903
-BOOTSTRAP_ADDRS = '202.91.32.72'.split(' ')
+BOOTSTRAP_ADDRS = ''.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-axe'
 VERSION_CHECK = lambda v: v >= 102010
