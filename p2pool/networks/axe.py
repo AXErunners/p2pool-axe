@@ -16,4 +16,4 @@ PERSIST = True
 WORKER_PORT = 7903
 BOOTSTRAP_ADDRS = '202.91.32.72'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-axe'
-VERSION_CHECK = lambda v: v >= 101080
+VERSION_CHECK = lambda v: v >= 102010
