@@ -32,8 +32,8 @@ try:
     setup(name='p2pool-axe',
         version=version,
         description='Peer-to-peer AXE mining pool',
-        author='Forrest Voight',
-        author_email='forrest@forre.st',
+        author='AXErunners',
+        author_email='info@axerunners.com',
         url='https://github.com/axerunners/p2pool-axe/',
         data_files=[
             ('', ['README.md']),
