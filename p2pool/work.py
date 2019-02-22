@@ -30,7 +30,7 @@ class WorkerBridge(worker_interface.WorkerBridge):
         self.pubkeys = pubkeys
         self.args = args
         self.my_pubkey_hash = my_pubkey_hash
-		
+
         self.donation_percentage = args.donation_percentage
         self.worker_fee = args.worker_fee
 
@@ -190,7 +190,7 @@ class WorkerBridge(worker_interface.WorkerBridge):
                     desired_share_target = axe_data.difficulty_to_target(float(parameter))
                 except:
                     if p2pool.DEBUG:
-                        log.err()        
+                        log.err()
 
         if self.args.address == 'dynamic':
             i = self.pubkeys.weighted()
@@ -381,16 +381,16 @@ class WorkerBridge(worker_interface.WorkerBridge):
         #need this for stats
         self.last_work_shares.value[axe_data.pubkey_hash_to_address(pubkey_hash, self.node.net.PARENT)]=share_info['bits']
 
-        coinbase_payload_size = 0
+        coinbase_payload_data_size = 0
         if gentx['version'] == 3 and gentx['type'] == 5:
-            coinbase_payload_size = len(pack.VarStrType().pack(gentx['payload']))
+            coinbase_payload_data_size = len(pack.VarStrType().pack(gentx['extra_payload']))
 
         ba = dict(
             version=self.current_work.value['version'],
             previous_block=self.current_work.value['previous_block'],
             merkle_link=merkle_link,
-            coinb1=packed_gentx[:-coinbase_payload_size-self.COINBASE_NONCE_LENGTH-4],
-            coinb2=packed_gentx[-coinbase_payload_size-4:],
+            coinb1=packed_gentx[:-coinbase_payload_data_size-self.COINBASE_NONCE_LENGTH-4],
+            coinb2=packed_gentx[-coinbase_payload_data_size-4:],
             timestamp=self.current_work.value['time'],
             bits=self.current_work.value['bits'],
             share_target=target,
@@ -400,7 +400,7 @@ class WorkerBridge(worker_interface.WorkerBridge):
 
         def got_response(header, user, coinbase_nonce):
             assert len(coinbase_nonce) == self.COINBASE_NONCE_LENGTH
-            new_packed_gentx = packed_gentx[:-coinbase_payload_size-self.COINBASE_NONCE_LENGTH-4] + coinbase_nonce + packed_gentx[-coinbase_payload_size-4:] if coinbase_nonce != '\0'*self.COINBASE_NONCE_LENGTH else packed_gentx
+            new_packed_gentx = packed_gentx[:-coinbase_payload_data_size-self.COINBASE_NONCE_LENGTH-4] + coinbase_nonce + packed_gentx[-coinbase_payload_data_size-4:] if coinbase_nonce != '\0'*self.COINBASE_NONCE_LENGTH else packed_gentx
             new_gentx = axe_data.tx_type.unpack(new_packed_gentx) if coinbase_nonce != '\0'*self.COINBASE_NONCE_LENGTH else gentx
 
             header_hash = self.node.net.PARENT.BLOCKHASH_FUNC(axe_data.block_header_type.pack(header))
