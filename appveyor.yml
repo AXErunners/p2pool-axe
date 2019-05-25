@@ -3,11 +3,11 @@ environment:
   - PYTHON: 'C:\Python27'
     vc_platform: amd64_x86
     platform: win32
-    pip_py2exe: http://sourceforge.net/projects/py2exe/files/latest/download?source=files
+    pip_py2exe: https://downloads.sourceforge.net/project/py2exe/py2exe/0.6.9/py2exe-0.6.9.zip
   - PYTHON: 'C:\Python27-x64'
     vc_platform: amd64
     platform: win-amd64
-    pip_py2exe: http://sourceforge.net/projects/py2exe/files/latest/download?source=files
+    pip_py2exe: https://downloads.sourceforge.net/project/py2exe/py2exe/0.6.9/py2exe-0.6.9.zip
 
 matrix:
   fast_finish: true
