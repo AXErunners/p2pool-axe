@@ -13,14 +13,14 @@ ADDRESS_VERSION = 140
 SCRIPT_ADDRESS_VERSION = 19
 RPC_PORT = 19337
 RPC_CHECK = defer.inlineCallbacks(lambda axed: defer.returnValue(
-            'axe' in (yield axed.rpc_help()) and
+            '== Axe ==' in (yield axed.rpc_help()) and
             (yield axed.rpc_getblockchaininfo())['chain'] != 'main'
         ))
 BLOCKHASH_FUNC = lambda data: pack.IntType(256).unpack(__import__('axe_hash').getPoWHash(data))
 POW_FUNC = lambda data: pack.IntType(256).unpack(__import__('axe_hash').getPoWHash(data))
 BLOCK_PERIOD = 150 # s
 SYMBOL = 'tAXE'
-CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'AXECore') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/AXECore/') if platform.system() == 'Darwin' else os.path.expanduser('~/.axecore'), 'axe.conf')
+CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'AxeCore') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/AxeCore/') if platform.system() == 'Darwin' else os.path.expanduser('~/.axecore'), 'axe.conf')
 BLOCK_EXPLORER_URL_PREFIX = 'https://test.explorer.axe.org/block/'
 ADDRESS_EXPLORER_URL_PREFIX = 'https://test.explorer.axe.org/address/'
 TX_EXPLORER_URL_PREFIX = 'https://test.explorer.axe.org/tx/'
