@@ -14,6 +14,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = False
 WORKER_PORT = 17923
-BOOTSTRAP_ADDRS = 'p2pool.axeninja.pl test.p2pool.masternode.io test.p2pool.axe.siampm.com'.split(' ')
+BOOTSTRAP_ADDRS = '45.77.1.27 207.148.15.191'.split(' ')
 ANNOUNCE_CHANNEL = ''
 VERSION_CHECK = lambda v: True
