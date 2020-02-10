@@ -13,7 +13,7 @@ ADDRESS_VERSION = 55
 SCRIPT_ADDRESS_VERSION = 16
 RPC_PORT = 9337
 RPC_CHECK = defer.inlineCallbacks(lambda axed: defer.returnValue(
-            '== Axe ==' in (yield axed.rpc_help()) and
+            (yield helper.check_block_header(axed, '00000c33631ca6f2f61368991ce2dc03306b5bb50bf7cede5cfbba6db38e52e6')) and
             (yield axed.rpc_getblockchaininfo())['chain'] == 'main'
         ))
 BLOCKHASH_FUNC = lambda data: pack.IntType(256).unpack(__import__('axe_hash').getPoWHash(data))
