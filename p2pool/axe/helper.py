@@ -119,3 +119,12 @@ def submit_block_rpc(block, ignore_failure, axed, axed_work, net):
 def submit_block(block, ignore_failure, factory, axed, axed_work, net):
     submit_block_rpc(block, ignore_failure, axed, axed_work, net)
     submit_block_p2p(block, factory, net)
+
+@defer.inlineCallbacks
+def check_block_header(bitcoind, block_hash):
+    try:
+        yield bitcoind.rpc_getblockheader(block_hash)
+    except jsonrpc.Error_for_code(-5):
+        defer.returnValue(False)
+    else:
+        defer.returnValue(True)
