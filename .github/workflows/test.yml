@@ -1,0 +1,26 @@
+name: test
+
+on: [push, pull_request]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 2.7
+    - name: prepare
+      run: |
+        cd axe_hash && python setup.py install
+        pip install -I coverage twisted service_identity
+    - name: test
+      run: python run_p2pool.py --help
