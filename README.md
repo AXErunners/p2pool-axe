@@ -4,7 +4,7 @@ Requirements:
 -------------------------
 Generic:
 
-* axed >=1.5.0
+* axed >=1.6.1
 * Python >=2.7
 * Twisted >=13.0.0
 * Zope.interface >=3.8.0
